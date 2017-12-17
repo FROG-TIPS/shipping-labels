@@ -1,0 +1,99 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #F0F0F0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: white;
+  padding: 0.7em;
+  font-size: 0.9em;
+  border-radius: 5px;
+  color: #707070;
+  border: 1px #C0C0C0 solid;
+}
+
+button:hover {
+  background: #F0F0F0;
+  cursor: pointer;
+}
+
+.page {
+  width: 215.9mm;
+  height: 279.4mm;
+  padding: 10.5mm 12.5mm 10.5mm 12.5mm;
+  margin: 0;
+  border: 1px #D3D3D3 solid;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#csv {
+  width: 100%;
+  height: 100px;
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+.labels {
+  width: 100%;
+  height: 100%;
+  table-layout:fixed;
+  border-collapse: separate;
+  border-spacing: 5mm;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 4mm;
+}
+
+.prototype {
+  display: none;
+}
+
+.labels tr td {
+  padding: 5mm;
+  word-wrap: break-word;
+  border-radius: 5px;
+  border: 1px #D3D3D3 solid;
+  background-color: #FFFFFF;
+}
+
+.label {
+  height: 50mm;
+  overflow: hidden;
+}
+
+@media print {
+  html, body {
+    width: 215.9mm;
+    height: 279.4mm;
+  }
+
+  #input {
+    display: none;
+  }
+
+  .page {
+    margin: 0;
+    border: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+
+  .labels tr td {
+    border: initial;
+    border-radius: initial;
+  }
+}
